@@ -21,7 +21,7 @@
  * License:           GPL v2 or later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Update URI:        https://github.com/itsalejandra/plugin-maps.git
- * Description:       Es un plugin que sirve para ver desde donde las personas se registran en nuestra red social, marcando asi en el mapa.
+ * Description:       Es un plugin que sirve para ver desde donde las personas se registran en nuestra red social, marcando asi en el mapa su ubicación.
  */
 function map_shortcode($atts) {
     // Generate output
