@@ -118,4 +118,4 @@ function map_shortcode($atts) {
 }
 
 // Register shortcode
-add_shortcode('mapas', 'map_shortcode');
+add_shortcode('map', 'map_shortcode');
