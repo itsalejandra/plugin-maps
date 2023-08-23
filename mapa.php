@@ -1,6 +1,6 @@
 <?php
 /**
- * Mi plugin
+ * Plugin Mapas
  *
  * @package           Mapa de geolocalizacion
  * @author            Alejandra Sanchez
