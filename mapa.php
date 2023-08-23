@@ -6,21 +6,22 @@
  * @author            Alejandra Sanchez
  * @copyright         2023 Alejandra Sanchez Lorenzo
  * @license           GPL-2.0-or-later
- * @link              https://github.com/itsalejandra/plugin2.0.git
+ * @link              https://github.com/itsalejandra/plugin-maps.git
  * @author            itsalejandra
  *
  * @wordpress-plugin
  * Plugin Name:       Mapa de geolocalizacion
- * Plugin URI:        https://example.com/plugin-name
+ * Plugin URI:        https://github.com/itsalejandra/plugin-maps.git
  * Version:           1.0.0
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            Alejandra Sanchez Lorenzo
- * Author URI:        https://example.com
+ * Author URI:        https://github.com/itsalejandra
  * Text Domain:       plugin-slug
  * License:           GPL v2 or later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Update URI:        https://example.com/my-plugin/
+ * Update URI:        https://github.com/itsalejandra/plugin-maps.git
+ * Description:       Es un plugin que sirve para ver desde donde las personas se registran en nuestra red social, marcando asi en el mapa.
  */
 function map_shortcode($atts) {
     // Generate output
@@ -92,7 +93,7 @@ function map_shortcode($atts) {
                 { name: "Vaticano", lat: 41.9029, lon: 12.4534 },
             ];
             var users = {
-                "Madrid": 3,   
+                "Madrid": 5,   
                 "Atenas": 2, 
                 "París": 1,
                 "Berlín": 1,
@@ -102,6 +103,7 @@ function map_shortcode($atts) {
                 "Vaticano": 10,
                 "Praga": 9,
                 "Varsovia": 4,
+                "Estocolmo": 8,
             };
 
             cities.forEach(function(city) {
