@@ -73,7 +73,7 @@ function map_shortcode($atts) {
             }
         }
 
-       var cities = [
+        var cities = [
                 { name: "Tirana", lat: 41.3275, lon: 19.8187 },
                 { name: "Berlín", lat: 52.5200, lon: 13.4050 },
                 { name: "Andorra la Vieja", lat: 42.5063, lon: 1.5218 },
