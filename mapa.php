@@ -44,7 +44,36 @@ function map_shortcode($atts) {
                 attribution: "Map data © <a href=&quot;https://www.openstreetmap.org/copyright&quot;>OpenStreetMap</a> contributors"
             }).addTo(europeMap);
 
-            var cities = [
+            var users = {
+                "Madrid": 5,
+                "Atenas": 2,
+                "París": 1,
+                "Berlín": 1,
+                "Dublín": 1,
+                "Amsterdan": 1,
+                "Lisboa": 5,
+                "Vaticano": 10,
+                "Praga": 9,
+                "Varsovia": 4,
+                "Estocolmo": 8,
+            };
+
+            for (var city in users) {
+                if (users.hasOwnProperty(city)) {
+                    var cityData = cities.find(function(c) {
+                        return c.name === city;
+                    });
+
+                    if (cityData) {
+                        var marker = L.marker([cityData.lat, cityData.lon]).addTo(europeMap);
+                        var userCount = users[city] || 0;
+                        marker.bindPopup(city + " (" + userCount + ")");
+                    }
+                }
+            }
+        }
+
+       var cities = [
                 { name: "Tirana", lat: 41.3275, lon: 19.8187 },
                 { name: "Berlín", lat: 52.5200, lon: 13.4050 },
                 { name: "Andorra la Vieja", lat: 42.5063, lon: 1.5218 },
@@ -92,26 +121,6 @@ function map_shortcode($atts) {
                 { name: "Kiev", lat: 50.4501, lon: 30.5234 },
                 { name: "Vaticano", lat: 41.9029, lon: 12.4534 },
             ];
-            var users = {
-                "Madrid": 5,   
-                "Atenas": 2, 
-                "París": 1,
-                "Berlín": 1,
-                "Dublín": 1,
-                "Amsterdan": 1,
-                "Lisboa": 5,
-                "Vaticano": 10,
-                "Praga": 9,
-                "Varsovia": 4,
-                "Estocolmo": 8,
-            };
-
-            cities.forEach(function(city) {
-                var marker = L.marker([city.lat, city.lon]).addTo(europeMap);
-                var userCount = users[city.name] || 0;
-                marker.bindPopup(city.name + " (" + userCount + ")");
-            });
-        }
     </script>';
 
     return $output;
